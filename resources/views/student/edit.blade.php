@@ -16,6 +16,12 @@
                     <input name="nama" value="{{ $item->nama }}" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
                 </div>
                 <div class="mb-5">
+                    <label for="nama" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Walas
+                    </label>
+                    <input name="walas" value="{{ $item->walas }}" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                </div>
+                <div class="mb-5">
                     <label for="kelas" class="mb-3 block text-base font-medium text-[#07074D]">
                         Kelas
                     </label>
@@ -23,7 +29,7 @@
                         <option>Pilih Kelas</option>
                         @foreach ($kelas as $i )
                             <option value="{{ $i }}">{{ $i }}</option>
-                        @endforeach                       
+                        @endforeach
                     </select>
                 </div>
                 <div class="mb-5">
@@ -34,7 +40,7 @@
                         <option>Pilih Jurusan</option>
                         @foreach ($jurusan as $i )
                             <option value="{{ $i }}">{{ $i }}</option>
-                        @endforeach                       
+                        @endforeach
                     </select>
                 </div>
                 <div>

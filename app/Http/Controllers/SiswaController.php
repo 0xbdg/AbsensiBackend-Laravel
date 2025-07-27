@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 class SiswaController extends Controller
 {
     public $jurusan = [
-            "PPLG",
-            "DKV",
-            "KULINER",
-            "PERHOTELAN",
-            "AKUNTANSI"
-        ];
+        "PPLG",
+        "DKV",
+        "KULINER",
+        "PERHOTELAN",
+        "AKUNTANSI"
+    ];
 
     public $kelas = [
         "X",
@@ -28,7 +28,8 @@ class SiswaController extends Controller
             "uid" => $siswa->uid,
             "nama" => $siswa->nama,
             "kelas" => $siswa->kelas,
-            "jurusan" => $siswa->jurusan
+            "jurusan" => $siswa->jurusan,
+            "walas" => $siswa->walas
         ]);
     }
 
@@ -63,8 +64,10 @@ class SiswaController extends Controller
             'uid' => 'required',
             'nama' => 'required',
             'kelas' => 'required',
-            'jurusan' => 'required'
+            'jurusan' => 'required',
+            'walas' => 'required'
         ]);
+
         Siswa::create($request->all());
         return redirect()->route("student");
     }
@@ -89,7 +92,8 @@ class SiswaController extends Controller
             'uid'=>"required",
             'nama'=>"required",
             'kelas'=>"required",
-            'jurusan'=>"required"
+            'jurusan'=>"required",
+            'walas' =>"required"
         ]));
 
         return redirect()->route("student");

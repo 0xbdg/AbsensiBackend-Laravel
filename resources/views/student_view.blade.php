@@ -24,7 +24,7 @@
             Tambah siswa
         </button>
         </a>
-       
+
     </div>
 
     <!-- User Table -->
@@ -37,20 +37,22 @@
                     <th class="py-3 px-6 text-left">Nama</th>
                     <th class="py-3 px-6 text-left">Jurusan</th>
                     <th class="py-3 px-6 text-left">kelas</th>
+                    <th class="py-3 px-6 text-left">Walas</th>
                     <th class="py-3 px-6 text-center">Actions</th>
                 </tr>
             </thead>
             <tbody class="text-gray-600 text-sm">
                 @php
-                    $count = 0;
+                    $count = 1;
                 @endphp
                 @foreach ($items as $i )
                 <tr class="border-b border-gray-200 hover:bg-gray-100">
-                    <td class="py-3 px-6 text-left">{{ $count+1 }}</td>
+                    <td class="py-3 px-6 text-left">{{ $count++ }}</td>
                     <td class="py-3 px-6 text-left">{{ $i->uid }}</td>
                     <td class="py-3 px-6 text-left">{{ $i->nama }}</td>
                     <td class="py-3 px-6 text-left">{{ $i->jurusan }}</td>
                     <td class="py-3 px-6 text-left">{{ $i->kelas }}</td>
+                    <td class="py-3 px-6 text-left">{{ $i->walas }}</td>
                     <td class="py-3 px-6 text-center">
                         <div class="flex item-center justify-center">
                             <a class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110" href="{{ route('student_edit', $i->id) }}">

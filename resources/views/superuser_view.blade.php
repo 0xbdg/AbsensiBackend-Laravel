@@ -13,7 +13,7 @@
             Tambah admin
         </button>
         </a>
-       
+
     </div>
 
     <!-- User Table -->
@@ -29,9 +29,12 @@
                 </tr>
             </thead>
             <tbody class="text-gray-600 text-sm">
+                @php
+                    $count = 1;
+                @endphp
                 @foreach ($users as $user )
                 <tr class="border-b border-gray-200 hover:bg-gray-100">
-                    <td class="py-3 px-6 text-left">{{ $user->id }}</td>
+                    <td class="py-3 px-6 text-left">{{ $count++ }}</td>
                     <td class="py-3 px-6 text-left">{{ $user->name}}</td>
                     <td class="py-3 px-6 text-left">{{ $user->email}}</td>
                     <td class="py-3 px-6 text-left">{{ $user->password}}</td>
